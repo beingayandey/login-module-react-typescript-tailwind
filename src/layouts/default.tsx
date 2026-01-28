@@ -8,7 +8,6 @@ const SignupPage = lazy(() => import("@/pages/auth/SignupPage"));
 const ForgotPasswordPage = lazy(
   () => import("@/pages/auth/ForgotPasswordPage"),
 );
-const Home = lazy(() => import("@/pages/Home"));
 
 function RootLayout() {
   return (
@@ -33,7 +32,6 @@ export default function AppRoutes() {
         <Route path="forgot-password" element={<ForgotPasswordPage />} />
 
         {/* Protected or other routes */}
-        <Route path="home" element={<Home />} />
 
         {/* Fallback */}
         <Route path="*" element={<Navigate to="/login" replace />} />
